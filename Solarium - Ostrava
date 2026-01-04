@@ -1,0 +1,101 @@
+index.html <!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samoobslužné solárium Hrabůvka – 15 Kč/min</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background:#0f172a; color:#e5e7eb; }
+    header { background:#020617; padding:24px; text-align:center; }
+    h1 { margin:0; font-size:32px; }
+    .price { font-size:24px; color:#22c55e; margin-top:8px; }
+    section { padding:24px; max-width:960px; margin:auto; }
+    .card { background:#020617; border-radius:16px; padding:20px; margin-bottom:16px; box-shadow:0 10px 30px rgba(0,0,0,.4);}    
+    .btn { background:#22c55e; color:#020617; padding:14px 20px; border-radius:12px; text-decoration:none; display:inline-block; font-weight:bold; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; }
+    label { display:block; margin-top:12px; }
+    input, select { width:100%; padding:12px; border-radius:10px; border:none; margin-top:6px; }
+    footer { text-align:center; padding:20px; color:#9ca3af; }
+    .note { color:#9ca3af; font-size:14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Samoobslužné solárium Ostrava – Hrabůvka</h1>
+  <div class="price">15 Kč / minuta • 24/7 • bez obsluhy</div>
+</header>
+
+<section>
+  <div class="card">
+    <h2>Rezervuj si čas (nepovinné)</h2>
+    <p class="note">Rezervace slouží pro jistotu místa. Pokud je volno, můžeš přijít i bez rezervace.</p>
+
+    <form id="bookingForm">
+      <div class="grid">
+        <div>
+          <label>Datum</label>
+          <input type="date" required />
+        </div>
+        <div>
+          <label>Čas</label>
+          <select required>
+            <option>08:00</option><option>09:00</option><option>10:00</option>
+            <option>11:00</option><option>12:00</option><option>13:00</option>
+            <option>14:00</option><option>15:00</option><option>16:00</option>
+            <option>17:00</option><option>18:00</option><option>19:00</option>
+            <option>20:00</option><option>21:00</option><option>22:00</option>
+          </select>
+        </div>
+        <div>
+          <label>Délka</label>
+          <select required>
+            <option>10 minut</option>
+            <option selected>12 minut</option>
+            <option>15 minut</option>
+            <option>20 minut</option>
+          </select>
+        </div>
+        <div>
+          <label>Telefon</label>
+          <input type="tel" placeholder="+420..." required />
+        </div>
+      </div>
+      <br />
+      <button class="btn" type="submit">Rezervovat</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Jak to funguje</h2>
+    <ol>
+      <li>Rezervuješ si čas (nebo přijdeš bez rezervace)</li>
+      <li>Hodinu předem ti přijde SMS s kódem ke dveřím</li>
+      <li>Přijdeš, opálíš se, odejdeš</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Proč k nám</h2>
+    <ul>
+      <li>Nejlevnější minuta v okolí</li>
+      <li>Bez čekání, bez obsluhy</li>
+      <li>Čisto, dezinfekce po každém použití</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  © 2026 Samoobslužné solárium Hrabůvka
+</footer>
+
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Rezervace uložena (demo). V ostré verzi se odešle SMS s kódem.');
+  });
+</script>
+
+</body>
+</html>
+first website
